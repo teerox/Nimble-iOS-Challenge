@@ -15,6 +15,7 @@
 		C795FE9727C3CF510053BD21 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795FE9627C3CF510053BD21 /* LoginModel.swift */; };
 		C795FE9A27C3CFB60053BD21 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795FE9927C3CFB60053BD21 /* LoginViewModel.swift */; };
 		C795FE9C27C3D1860053BD21 /* CacheData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795FE9B27C3D1860053BD21 /* CacheData.swift */; };
+		C795FE9E27C3DC780053BD21 /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795FE9D27C3DC780053BD21 /* LoginViewModelTest.swift */; };
 		C7CF98CC27BE2EAC00023722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CF98CB27BE2EAC00023722 /* AppDelegate.swift */; };
 		C7CF98CE27BE2EAC00023722 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CF98CD27BE2EAC00023722 /* SceneDelegate.swift */; };
 		C7CF98D027BE2EAC00023722 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CF98CF27BE2EAC00023722 /* ViewController.swift */; };
@@ -51,6 +52,7 @@
 		C795FE9627C3CF510053BD21 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		C795FE9927C3CFB60053BD21 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C795FE9B27C3D1860053BD21 /* CacheData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheData.swift; sourceTree = "<group>"; };
+		C795FE9D27C3DC780053BD21 /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
 		C7CF98C827BE2EAC00023722 /* Nimble-iOS-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nimble-iOS-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CF98CB27BE2EAC00023722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7CF98CD27BE2EAC00023722 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				C7CF98E227BE2EB400023722 /* Nimble_iOS_ChallengeTests.swift */,
 				C7CF98E427BE2EB400023722 /* Info.plist */,
+				C795FE9D27C3DC780053BD21 /* LoginViewModelTest.swift */,
 			);
 			path = "Nimble-iOS-ChallengeTests";
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C795FE9E27C3DC780053BD21 /* LoginViewModelTest.swift in Sources */,
 				C7CF98E327BE2EB400023722 /* Nimble_iOS_ChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +474,8 @@
 				APP_NAME = "Nimble-iOS-Challenge Production";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLIENT_ID = "ofzl-2h5ympKa0WqqTzqlVJUiRsxmXQmt5tkgrlWnOE";
+				CLIENT_SECRET = "lMQb900L-mTeU-FVTCwyhjsfBwRCxwwbCitPob96cuU";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R6UMZ637R6;
 				INFOPLIST_FILE = "Nimble-iOS-Challenge/Info.plist";
@@ -479,6 +485,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.nimblehq.Nimble-iOS-Challenge-production";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				ROOT_URL = "survey-api.nimblehq.co";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PRODUCTION";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -588,6 +595,8 @@
 				APP_NAME = "Nimble-iOS-Challenge Production";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLIENT_ID = "ofzl-2h5ympKa0WqqTzqlVJUiRsxmXQmt5tkgrlWnOE";
+				CLIENT_SECRET = "lMQb900L-mTeU-FVTCwyhjsfBwRCxwwbCitPob96cuU";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R6UMZ637R6;
 				INFOPLIST_FILE = "Nimble-iOS-Challenge/Info.plist";
@@ -597,6 +606,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.nimblehq.Nimble-iOS-Challenge-production";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				ROOT_URL = "survey-api.nimblehq.co";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PRODUCTION;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -712,6 +722,8 @@
 				APP_NAME = "Nimble-iOS-Challenge Debug";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLIENT_ID = "ofzl-2h5ympKa0WqqTzqlVJUiRsxmXQmt5tkgrlWnOE";
+				CLIENT_SECRET = "lMQb900L-mTeU-FVTCwyhjsfBwRCxwwbCitPob96cuU";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R6UMZ637R6;
 				INFOPLIST_FILE = "Nimble-iOS-Challenge/Info.plist";
@@ -721,6 +733,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.nimblehq.Nimble-iOS-Challenge-debug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				ROOT_URL = "survey-api.nimblehq.co";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG LOCAL";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -891,6 +904,8 @@
 				APP_NAME = "Nimble-iOS-Challenge Staging";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLIENT_ID = "ofzl-2h5ympKa0WqqTzqlVJUiRsxmXQmt5tkgrlWnOE";
+				CLIENT_SECRET = "lMQb900L-mTeU-FVTCwyhjsfBwRCxwwbCitPob96cuU";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R6UMZ637R6;
 				INFOPLIST_FILE = "Nimble-iOS-Challenge/Info.plist";
@@ -900,6 +915,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.nimblehq.Nimble-iOS-Challeng-staging";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				ROOT_URL = "nimble-survey-web-staging.herokuapp.com";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG STAGING";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -912,6 +928,8 @@
 				APP_NAME = "Nimble-iOS-Challenge Staging";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLIENT_ID = "ofzl-2h5ympKa0WqqTzqlVJUiRsxmXQmt5tkgrlWnOE";
+				CLIENT_SECRET = "lMQb900L-mTeU-FVTCwyhjsfBwRCxwwbCitPob96cuU";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R6UMZ637R6;
 				INFOPLIST_FILE = "Nimble-iOS-Challenge/Info.plist";
@@ -921,6 +939,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.nimblehq.Nimble-iOS-Challenge-staging";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				ROOT_URL = "nimble-survey-web-staging.herokuapp.com";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = STAGING;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
