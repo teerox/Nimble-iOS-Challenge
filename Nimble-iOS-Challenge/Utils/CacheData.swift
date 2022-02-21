@@ -15,7 +15,7 @@ final class CacheData {
         userDefaults = UserDefaults.standard
     }
     
-    func saveAttributes(data: Attributes) {
+    func saveAttributes(data: Attributes?) {
         do {
             let encoder = JSONEncoder()
             let data = try encoder.encode(data)

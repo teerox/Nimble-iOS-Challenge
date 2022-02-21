@@ -21,12 +21,19 @@ enum HTTPError: Error {
 final class APIClient {
     
     public func load<T: Codable>(_ model: T.Type, _ endpoint: Endpoint, completion: @escaping (Result<T, HTTPError>) -> Void) {
+        
         guard let componentUrl = endpoint.url else {
             completion(.failure(.invalidRequest("Wrong URL")))
             return
         }
 
-        let request = URLRequest(url: componentUrl)
+        var request = URLRequest(url: componentUrl, cachePolicy: .reloadIgnoringLocalCacheData)
+        request.httpMethod = endpoint.requestType.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        if let body = try? JSONSerialization.data(withJSONObject: endpoint.parameters, options: .prettyPrinted) {
+            request.httpBody = body
+        }
 
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard error == nil else {
@@ -38,7 +45,7 @@ final class APIClient {
                 completion(.failure(.invalidRequest("No data available")))
                 return
             }
-            
+           
             if 200 ..< 300 ~= httpResponse.statusCode {
                 if let result = try? JSONDecoder().decode(T.self, from: responseData) {
                     completion(.success(result))

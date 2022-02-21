@@ -15,4 +15,5 @@ class UrlConstants {
     static let baseURL = MyEnvironment.rootURL.absoluteString
     static let clientID = MyEnvironment.clientID
     static let clientSecret = MyEnvironment.clientSecret
+    static let loginUrl = "/api/v1/oauth/token"
 }
