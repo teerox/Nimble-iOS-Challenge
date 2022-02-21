@@ -12,6 +12,9 @@
 		C795FE7827C2549C0053BD21 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795FE7727C2549C0053BD21 /* Constants.swift */; };
 		C795FE7B27C258F00053BD21 /* APIErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795FE7A27C258F00053BD21 /* APIErrorModel.swift */; };
 		C795FE9527C263B60053BD21 /* MyEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795FE9427C263B60053BD21 /* MyEnvironment.swift */; };
+		C795FE9727C3CF510053BD21 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795FE9627C3CF510053BD21 /* LoginModel.swift */; };
+		C795FE9A27C3CFB60053BD21 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795FE9927C3CFB60053BD21 /* LoginViewModel.swift */; };
+		C795FE9C27C3D1860053BD21 /* CacheData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795FE9B27C3D1860053BD21 /* CacheData.swift */; };
 		C7CF98CC27BE2EAC00023722 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CF98CB27BE2EAC00023722 /* AppDelegate.swift */; };
 		C7CF98CE27BE2EAC00023722 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CF98CD27BE2EAC00023722 /* SceneDelegate.swift */; };
 		C7CF98D027BE2EAC00023722 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CF98CF27BE2EAC00023722 /* ViewController.swift */; };
@@ -45,6 +48,9 @@
 		C795FE7727C2549C0053BD21 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C795FE7A27C258F00053BD21 /* APIErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorModel.swift; sourceTree = "<group>"; };
 		C795FE9427C263B60053BD21 /* MyEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEnvironment.swift; sourceTree = "<group>"; };
+		C795FE9627C3CF510053BD21 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		C795FE9927C3CFB60053BD21 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		C795FE9B27C3D1860053BD21 /* CacheData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheData.swift; sourceTree = "<group>"; };
 		C7CF98C827BE2EAC00023722 /* Nimble-iOS-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nimble-iOS-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7CF98CB27BE2EAC00023722 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7CF98CD27BE2EAC00023722 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +98,14 @@
 				C795FE9427C263B60053BD21 /* MyEnvironment.swift */,
 			);
 			path = Configurations;
+			sourceTree = "<group>";
+		};
+		C795FE9827C3CF9F0053BD21 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				C795FE9927C3CFB60053BD21 /* LoginViewModel.swift */,
+			);
+			path = LoginView;
 			sourceTree = "<group>";
 		};
 		C7CF98BF27BE2EAC00023722 = {
@@ -156,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				C795FE7A27C258F00053BD21 /* APIErrorModel.swift */,
+				C795FE9627C3CF510053BD21 /* LoginModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				C795FE7727C2549C0053BD21 /* Constants.swift */,
+				C795FE9B27C3D1860053BD21 /* CacheData.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -187,6 +203,7 @@
 		C7CF98FF27BE2F4300023722 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C795FE9827C3CF9F0053BD21 /* LoginView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -325,9 +342,12 @@
 				C795FE9527C263B60053BD21 /* MyEnvironment.swift in Sources */,
 				C7CF98CC27BE2EAC00023722 /* AppDelegate.swift in Sources */,
 				C7CF98CE27BE2EAC00023722 /* SceneDelegate.swift in Sources */,
+				C795FE9C27C3D1860053BD21 /* CacheData.swift in Sources */,
+				C795FE9727C3CF510053BD21 /* LoginModel.swift in Sources */,
 				C795FE7427C253CC0053BD21 /* APIClient.swift in Sources */,
 				C795FE7B27C258F00053BD21 /* APIErrorModel.swift in Sources */,
 				C795FE7627C2546E0053BD21 /* Endpoint.swift in Sources */,
+				C795FE9A27C3CFB60053BD21 /* LoginViewModel.swift in Sources */,
 				C795FE7827C2549C0053BD21 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

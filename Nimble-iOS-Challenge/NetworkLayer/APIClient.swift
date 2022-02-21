@@ -7,13 +7,20 @@
 
 import Foundation
 
+enum RequestType: String {
+    case GET
+    case POST
+}
+
+typealias Parameters = [String: Any]
+
 enum HTTPError: Error {
     case invalidRequest(String)
 }
 
 final class APIClient {
     
-    public func get<T: Codable>(_ model: T.Type, _ endpoint: Endpoint, completion: @escaping (Result<T, HTTPError>) -> Void) {
+    public func load<T: Codable>(_ model: T.Type, _ endpoint: Endpoint, completion: @escaping (Result<T, HTTPError>) -> Void) {
         guard let componentUrl = endpoint.url else {
             completion(.failure(.invalidRequest("Wrong URL")))
             return
