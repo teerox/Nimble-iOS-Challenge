@@ -33,3 +33,15 @@ struct Attributes: Codable {
         case createdAt = "created_at"
     }
 }
+
+struct LogOutResponse: Codable {
+}
+
+struct ResetPasswordResponse: Codable {
+    let meta: Meta
+}
+
+// MARK: - Meta
+struct Meta: Codable {
+    let message: String
+}

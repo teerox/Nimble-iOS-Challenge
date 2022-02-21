@@ -16,8 +16,8 @@ class LoginViewModelTest: XCTestCase {
     
 
     override func setUpWithError() throws {
-        apiClient = APIClient()
         cacheData = CacheData()
+        apiClient = APIClient(cachedData: cacheData)
     }
 
     override func tearDownWithError() throws {

@@ -16,4 +16,7 @@ class UrlConstants {
     static let clientID = MyEnvironment.clientID
     static let clientSecret = MyEnvironment.clientSecret
     static let loginUrl = "/api/v1/oauth/token"
+    static let refreshTokenUrl = "/api/v1/oauth/token"
+    static let logOutUrl = "/api/v1/oauth/revoke"
+    static let resetPasswordUrl = "/api/v1/passwords"
 }
