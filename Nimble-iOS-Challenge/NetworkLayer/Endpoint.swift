@@ -18,7 +18,7 @@ extension Endpoint {
     var url: URL? {
         var components = URLComponents()
         components.scheme = "https"
-        components.host = UrlConstants.productionBaseUrl
+        components.host = UrlConstants.baseURL
         components.path = path
         components.queryItems = queryItems
 
@@ -31,7 +31,7 @@ extension Endpoint {
 
     static func signIn(email: String, password: String) -> Endpoint {
         return Endpoint(
-            path: UrlConstants.productionBaseUrl,
+            path: UrlConstants.baseURL,
             queryItems: [],
             requestType: .POST,
             parameters: ["grant_type":"password","email":email,"password":password,"client_id":UrlConstants.clientID,"client_secret":UrlConstants.clientSecret]
