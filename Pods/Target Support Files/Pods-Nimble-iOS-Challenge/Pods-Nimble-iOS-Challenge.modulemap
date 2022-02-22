@@ -1,0 +1,6 @@
+framework module Pods_Nimble_iOS_Challenge {
+  umbrella header "Pods-Nimble-iOS-Challenge-umbrella.h"
+
+  export *
+  module * { export * }
+}

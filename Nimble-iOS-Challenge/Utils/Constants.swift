@@ -19,4 +19,8 @@ class UrlConstants {
     static let refreshTokenUrl = "/api/v1/oauth/token"
     static let logOutUrl = "/api/v1/oauth/revoke"
     static let resetPasswordUrl = "/api/v1/passwords"
+    static let getUserData = "/api/v1/me"
+    static let getAllSurvey = "/api/v1/surveys"
+    static let getSingleSurvey = "/api/v1/surveys/%@"
+    
 }

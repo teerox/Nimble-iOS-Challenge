@@ -28,19 +28,33 @@ final class APIClient {
     
     public func load<T: Codable>(_ model: T.Type, _ endpoint: Endpoint, completion: @escaping (Result<T, HTTPError>) -> Void) {
         
+        
+        
+        
         guard let componentUrl = endpoint.url else {
             completion(.failure(.invalidRequest("Wrong URL")))
             return
         }
-
+        
         var request = URLRequest(url: componentUrl, cachePolicy: .reloadIgnoringLocalCacheData)
         request.httpMethod = endpoint.requestType.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        if let body = try? JSONSerialization.data(withJSONObject: endpoint.parameters, options: .prettyPrinted) {
-            request.httpBody = body
+        if let token = cachedData?.getAttributes() {
+            var httpHeader: [String: String] {
+                return ["Content-Type": "application/json",
+                        "Accept": "application/json",
+                        "Authorization": "Bearer " + token.accessToken]
+            }
+            request.allHTTPHeaderFields = httpHeader
         }
-
+        if let param = endpoint.parameters {
+            if let body = try? JSONSerialization.data(withJSONObject: param, options: .prettyPrinted) {
+                request.httpBody = body
+            }
+        }
+        
+        
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard error == nil else {
                 completion(.failure(.invalidRequest("Unable to connect")))
@@ -53,10 +67,13 @@ final class APIClient {
             }
            
             if 200 ..< 300 ~= httpResponse.statusCode {
-                if let result = try? JSONDecoder().decode(T.self, from: responseData) {
-                    completion(.success(result))
-                } else {
+                do {
+                    let responseJson = try JSONDecoder().decode(T.self, from: responseData)
+                    completion(.success(responseJson))
+                }
+                catch let parseJSONError {
                     completion(.failure(.invalidRequest("Invalid JSON")))
+                    print("error on parsing request to JSON : \(parseJSONError)")
                 }
                 
             } else if httpResponse.statusCode == 400 {
@@ -100,52 +117,52 @@ final class APIClient {
             } else {
                 completion(.failure(.invalidRequest("Cannot connect to the server")))
             }
-           
+            
         }.resume()
     }
     
     
     private func refreshToken(_ endpoint: Endpoint, completion: @escaping (Result<LoginResponse, HTTPError>) -> Void) {
-    
-    guard let componentUrl = endpoint.url else {
-        completion(.failure(.invalidRequest("Wrong URL")))
-        return
-    }
-
-    var request = URLRequest(url: componentUrl, cachePolicy: .reloadIgnoringLocalCacheData)
-    request.httpMethod = endpoint.requestType.rawValue
-    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    
-    if let body = try? JSONSerialization.data(withJSONObject: endpoint.parameters, options: .prettyPrinted) {
-        request.httpBody = body
-    }
-
-    URLSession.shared.dataTask(with: request) { data, response, error in
-        guard error == nil else {
-            completion(.failure(.invalidRequest("Unable to connect")))
+        
+        guard let componentUrl = endpoint.url else {
+            completion(.failure(.invalidRequest("Wrong URL")))
             return
         }
         
-        guard let httpResponse = response as? HTTPURLResponse, let responseData = data else {
-            completion(.failure(.invalidRequest("No data available")))
-            return
+        var request = URLRequest(url: componentUrl, cachePolicy: .reloadIgnoringLocalCacheData)
+        request.httpMethod = endpoint.requestType.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        if let param = endpoint.parameters {
+            if let body = try? JSONSerialization.data(withJSONObject: param, options: .prettyPrinted) {
+                request.httpBody = body
+            }
         }
-       
-        if 200 ..< 300 ~= httpResponse.statusCode {
-            if let result = try? JSONDecoder().decode(LoginResponse.self, from: responseData) {
-                completion(.success(result))
-            } else {
-                completion(.failure(.invalidRequest("Invalid JSON")))
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard error == nil else {
+                completion(.failure(.invalidRequest("Unable to connect")))
+                return
             }
             
-        } else if 400 ..< 500 ~= httpResponse.statusCode {
-           completion(.failure(.invalidRequest("Cannot connect to the server")))
-            
-            return
-        } else {
-            completion(.failure(.invalidRequest("Cannot connect to the server")))
-        }
-       
-    }.resume()
+            guard let httpResponse = response as? HTTPURLResponse, let responseData = data else {
+                completion(.failure(.invalidRequest("No data available")))
+                return
+            }
+            if 200 ..< 300 ~= httpResponse.statusCode {
+                if let result = try? JSONDecoder().decode(LoginResponse.self, from: responseData) {
+                    completion(.success(result))
+                } else {
+                    completion(.failure(.invalidRequest("Invalid JSON")))
+                }
+                
+            } else if 400 ..< 500 ~= httpResponse.statusCode {
+                completion(.failure(.invalidRequest("Cannot connect to the server")))
+                
+                return
+            } else {
+                completion(.failure(.invalidRequest("Cannot connect to the server")))
+            }
+        }.resume()
     }
 }

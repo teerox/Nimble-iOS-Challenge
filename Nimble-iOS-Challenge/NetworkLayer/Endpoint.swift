@@ -11,7 +11,7 @@ struct Endpoint {
     let path: String
       let queryItems: [URLQueryItem]?
       let requestType: RequestType
-      let parameters: Parameters
+      let parameters: Parameters?
 }
 
 extension Endpoint {
@@ -64,6 +64,41 @@ extension Endpoint {
             queryItems: nil,
             requestType: .POST,
             parameters: ["user":["email":email],"client_id":UrlConstants.clientID,"client_secret":UrlConstants.clientSecret]
+        )
+        return value
+    }
+}
+
+
+// Home
+extension Endpoint {
+    
+    static func getUserData() -> Endpoint {
+        let value = Endpoint(
+            path: UrlConstants.getUserData,
+            queryItems: nil,
+            requestType: .GET,
+            parameters: nil
+        )
+        return value
+    }
+    
+    static func getAllSurvey() -> Endpoint {
+        let value = Endpoint(
+            path: UrlConstants.getAllSurvey,
+            queryItems: nil,
+            requestType: .GET,
+            parameters: nil
+        )
+        return value
+    }
+    
+    static func getSingleSurvey(id: String) -> Endpoint {
+        let value = Endpoint(
+            path:  String(format: UrlConstants.getSingleSurvey, id),
+            queryItems: nil,
+            requestType: .GET,
+            parameters: nil
         )
         return value
     }
