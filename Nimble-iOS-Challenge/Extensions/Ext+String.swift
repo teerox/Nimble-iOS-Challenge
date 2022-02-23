@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import UIKit
+
+public extension String{
+    
+    var getColor: UIColor{
+        get{
+            return UIColor.hexStringToUIColor(hex: self)
+        }
+    }
+    
+}

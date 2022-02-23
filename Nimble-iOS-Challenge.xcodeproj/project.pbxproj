@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,15 @@
 		C70FC1A127C5A6C500B1CAC4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70FC19F27C5A6C500B1CAC4 /* ForgotPasswordViewController.swift */; };
 		C70FC1A227C5A6C500B1CAC4 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70FC1A027C5A6C500B1CAC4 /* ForgotPasswordViewController.xib */; };
 		C70FC1A527C5A95F00B1CAC4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70FC1A427C5A95F00B1CAC4 /* HomeViewController.swift */; };
+		C70FC1A827C5B16A00B1CAC4 /* SingleHomeComponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70FC1A627C5B16900B1CAC4 /* SingleHomeComponentViewController.swift */; };
+		C70FC1A927C5B16A00B1CAC4 /* SingleHomeComponentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70FC1A727C5B16900B1CAC4 /* SingleHomeComponentViewController.xib */; };
+		C70FC1AB27C62B3A00B1CAC4 /* Ext+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70FC1AA27C62B3A00B1CAC4 /* Ext+UIColor.swift */; };
+		C70FC1B027C62CB200B1CAC4 /* TakeSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70FC1AE27C62CB200B1CAC4 /* TakeSurveyViewController.swift */; };
+		C70FC1B127C62CB200B1CAC4 /* TakeSurveyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70FC1AF27C62CB200B1CAC4 /* TakeSurveyViewController.xib */; };
+		C70FC1B427C637B100B1CAC4 /* SuveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70FC1B227C637B100B1CAC4 /* SuveyViewController.swift */; };
+		C70FC1B527C637B100B1CAC4 /* SuveyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70FC1B327C637B100B1CAC4 /* SuveyViewController.xib */; };
+		C70FC1B827C63F0400B1CAC4 /* SuccessPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70FC1B627C63F0400B1CAC4 /* SuccessPageViewController.swift */; };
+		C70FC1B927C63F0400B1CAC4 /* SuccessPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70FC1B727C63F0400B1CAC4 /* SuccessPageViewController.xib */; };
 		C795FE7427C253CC0053BD21 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795FE7327C253CC0053BD21 /* APIClient.swift */; };
 		C795FE7627C2546E0053BD21 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795FE7527C2546E0053BD21 /* Endpoint.swift */; };
 		C795FE7827C2549C0053BD21 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795FE7727C2549C0053BD21 /* Constants.swift */; };
@@ -87,6 +96,15 @@
 		C70FC19F27C5A6C500B1CAC4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		C70FC1A027C5A6C500B1CAC4 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
 		C70FC1A427C5A95F00B1CAC4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C70FC1A627C5B16900B1CAC4 /* SingleHomeComponentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHomeComponentViewController.swift; sourceTree = "<group>"; };
+		C70FC1A727C5B16900B1CAC4 /* SingleHomeComponentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleHomeComponentViewController.xib; sourceTree = "<group>"; };
+		C70FC1AA27C62B3A00B1CAC4 /* Ext+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIColor.swift"; sourceTree = "<group>"; };
+		C70FC1AE27C62CB200B1CAC4 /* TakeSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeSurveyViewController.swift; sourceTree = "<group>"; };
+		C70FC1AF27C62CB200B1CAC4 /* TakeSurveyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TakeSurveyViewController.xib; sourceTree = "<group>"; };
+		C70FC1B227C637B100B1CAC4 /* SuveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuveyViewController.swift; sourceTree = "<group>"; };
+		C70FC1B327C637B100B1CAC4 /* SuveyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuveyViewController.xib; sourceTree = "<group>"; };
+		C70FC1B627C63F0400B1CAC4 /* SuccessPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessPageViewController.swift; sourceTree = "<group>"; };
+		C70FC1B727C63F0400B1CAC4 /* SuccessPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessPageViewController.xib; sourceTree = "<group>"; };
 		C795FE7327C253CC0053BD21 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		C795FE7527C2546E0053BD21 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		C795FE7727C2549C0053BD21 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -181,7 +199,6 @@
 				C94A889C6040CD9148B982AF /* Pods-Nimble-iOS-ChallengeTests.staging release.xcconfig */,
 				216C6D4B8973446F05678301 /* Pods-Nimble-iOS-ChallengeTests.production release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -201,6 +218,35 @@
 				C70FC19E27C5A6AA00B1CAC4 /* ForgotPassword */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		C70FC1AC27C62C8000B1CAC4 /* SingleHomeView */ = {
+			isa = PBXGroup;
+			children = (
+				C70FC1A627C5B16900B1CAC4 /* SingleHomeComponentViewController.swift */,
+				C70FC1A727C5B16900B1CAC4 /* SingleHomeComponentViewController.xib */,
+			);
+			path = SingleHomeView;
+			sourceTree = "<group>";
+		};
+		C70FC1AD27C62C9A00B1CAC4 /* SurveyView */ = {
+			isa = PBXGroup;
+			children = (
+				C70FC1AE27C62CB200B1CAC4 /* TakeSurveyViewController.swift */,
+				C70FC1AF27C62CB200B1CAC4 /* TakeSurveyViewController.xib */,
+				C70FC1B227C637B100B1CAC4 /* SuveyViewController.swift */,
+				C70FC1B327C637B100B1CAC4 /* SuveyViewController.xib */,
+			);
+			path = SurveyView;
+			sourceTree = "<group>";
+		};
+		C70FC1BA27C63F0C00B1CAC4 /* SuccessView */ = {
+			isa = PBXGroup;
+			children = (
+				C70FC1B627C63F0400B1CAC4 /* SuccessPageViewController.swift */,
+				C70FC1B727C63F0400B1CAC4 /* SuccessPageViewController.xib */,
+			);
+			path = SuccessView;
 			sourceTree = "<group>";
 		};
 		C795FE7927C255680053BD21 /* Configurations */ = {
@@ -224,6 +270,9 @@
 		C795FE9F27C421580053BD21 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
+				C70FC1BA27C63F0C00B1CAC4 /* SuccessView */,
+				C70FC1AD27C62C9A00B1CAC4 /* SurveyView */,
+				C70FC1AC27C62C8000B1CAC4 /* SingleHomeView */,
 				C795FEA027C4217A0053BD21 /* HomeViewModel.swift */,
 				C70FC1A427C5A95F00B1CAC4 /* HomeViewController.swift */,
 			);
@@ -314,6 +363,7 @@
 				C795FEAE27C431F50053BD21 /* Ext+Date.swift */,
 				C795FEB027C432070053BD21 /* Ext+UIViewController.swift */,
 				C70FC19C27C59B1200B1CAC4 /* Ext+UITextField.swift */,
+				C70FC1AA27C62B3A00B1CAC4 /* Ext+UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -453,11 +503,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C70FC1B127C62CB200B1CAC4 /* TakeSurveyViewController.xib in Resources */,
 				C70FC19B27C58DB800B1CAC4 /* LoginViewController.xib in Resources */,
 				C7CF98D827BE2EB300023722 /* LaunchScreen.storyboard in Resources */,
+				C70FC1B527C637B100B1CAC4 /* SuveyViewController.xib in Resources */,
 				C7CF98D527BE2EB300023722 /* Assets.xcassets in Resources */,
 				C7CF98D327BE2EAC00023722 /* Main.storyboard in Resources */,
 				C70FC1A227C5A6C500B1CAC4 /* ForgotPasswordViewController.xib in Resources */,
+				C70FC1A927C5B16A00B1CAC4 /* SingleHomeComponentViewController.xib in Resources */,
+				C70FC1B927C63F0400B1CAC4 /* SuccessPageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +642,7 @@
 				C70FC1A527C5A95F00B1CAC4 /* HomeViewController.swift in Sources */,
 				C795FEA927C431B90053BD21 /* Ext+UIView.swift in Sources */,
 				C795FEAB27C431D70053BD21 /* Ext+UIImageView.swift in Sources */,
+				C70FC1B827C63F0400B1CAC4 /* SuccessPageViewController.swift in Sources */,
 				C795FEB127C432070053BD21 /* Ext+UIViewController.swift in Sources */,
 				C7CF98D027BE2EAC00023722 /* ViewController.swift in Sources */,
 				C795FE9527C263B60053BD21 /* MyEnvironment.swift in Sources */,
@@ -599,6 +654,8 @@
 				C795FEB327C436B00053BD21 /* SurveyAnswers.swift in Sources */,
 				C70FC19A27C58DB800B1CAC4 /* LoginViewController.swift in Sources */,
 				C70FC19D27C59B1200B1CAC4 /* Ext+UITextField.swift in Sources */,
+				C70FC1AB27C62B3A00B1CAC4 /* Ext+UIColor.swift in Sources */,
+				C70FC1B027C62CB200B1CAC4 /* TakeSurveyViewController.swift in Sources */,
 				C795FE7427C253CC0053BD21 /* APIClient.swift in Sources */,
 				C795FEA127C4217A0053BD21 /* HomeViewModel.swift in Sources */,
 				C795FE7B27C258F00053BD21 /* APIErrorModel.swift in Sources */,
@@ -606,7 +663,9 @@
 				C795FEAF27C431F50053BD21 /* Ext+Date.swift in Sources */,
 				C795FE7627C2546E0053BD21 /* Endpoint.swift in Sources */,
 				C795FE9A27C3CFB60053BD21 /* LoginViewModel.swift in Sources */,
+				C70FC1A827C5B16A00B1CAC4 /* SingleHomeComponentViewController.swift in Sources */,
 				C795FEAD27C431EB0053BD21 /* Ext+String.swift in Sources */,
+				C70FC1B427C637B100B1CAC4 /* SuveyViewController.swift in Sources */,
 				C795FEA727C431AB0053BD21 /* Ext+UITableViewCell.swift in Sources */,
 				C795FE7827C2549C0053BD21 /* Constants.swift in Sources */,
 				C795FEA527C42F9E0053BD21 /* Extensions.swift in Sources */,

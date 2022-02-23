@@ -236,3 +236,101 @@ private extension UIView {
         return [bottomAnchor.constraint(equalTo: anchor ?? view.topAnchor, constant: constant)]
     }
 }
+
+
+
+public class SkeletonLabel: UILabel{
+    var skeletonColor: String = "f6f6f6"
+}
+
+public class SkeletonCover: UIView{
+    
+}
+public extension UIView {
+     func endSkeleton() {
+        for i in self.subviews{
+            if let stack = i as? UIStackView{
+                for n in stack.subviews{
+                   n.removeSkeleton()
+                }
+            }else{
+                i.removeSkeleton()
+            }
+        }
+    }
+    
+     func removeSkeleton(){
+        for n in self.subviews{
+            if let shellView = n as? SkeletonCover{
+                shellView.removeFromSuperview()
+            }
+            n.layer.mask = nil
+        }
+    }
+    
+    
+    func addSkeleton(){
+        let n = self
+        let cover = SkeletonCover(frame: n.bounds)
+        if let nView = n as? SkeletonLabel{
+            cover.backgroundColor = nView.skeletonColor.getColor
+        }else{
+            cover.backgroundColor = UIColor.hexStringToUIColor(hex: "ECECEC")
+        }
+        n.addSubview(cover)
+        let cover2 = SkeletonCover(frame: n.bounds)
+        cover2.backgroundColor = UIColor.gray
+        n.addSubview(cover2)
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [
+            UIColor.clear.cgColor, UIColor.clear.cgColor,
+            UIColor.gray.withAlphaComponent(0.1).cgColor, UIColor.gray.withAlphaComponent(0.1).cgColor,
+            UIColor.gray.withAlphaComponent(0.1).cgColor, UIColor.gray.withAlphaComponent(0.1).cgColor,
+            UIColor.clear.cgColor, UIColor.clear.cgColor
+        ]
+        gradientLayer.locations = [0, 0.1, 0.3, 0.4, 0.6,0.7, 0.9, 1]
+        
+        let angle = 60 * CGFloat.pi / 180
+        let rotationTransform = CATransform3DMakeRotation(angle, 0, 0, 1)
+        gradientLayer.transform = rotationTransform
+        cover2.layer.addSublayer(gradientLayer)
+        gradientLayer.frame = cover2.frame
+        gradientLayer.opacity = 0.8
+        cover2.layer.mask = gradientLayer
+        gradientLayer.transform = CATransform3DConcat(gradientLayer.transform, CATransform3DMakeScale(3, 3, 0))
+        let animation = CABasicAnimation(keyPath: "transform.translation.x")
+        animation.duration = 3
+        animation.repeatCount = Float.infinity
+        animation.autoreverses = false
+        animation.fromValue = -3  * n.bounds.width
+        animation.toValue = 3 * n.bounds.width
+        animation.isRemovedOnCompletion = false
+        animation.fillMode = CAMediaTimingFillMode.forwards
+        gradientLayer.add(animation, forKey: "shimmerKey")
+    }
+     func viewSkeleton(){
+         for i in self.subviews{
+              i.addSkeleton()
+            }
+        }
+    
+    
+   func removeViewSkeleton(){
+           for i in self.subviews{
+                i.removeSkeleton()
+              }
+          }
+   func startSkeleton(){
+        for i in self.subviews{
+            if let stack = i as? UIStackView{
+                for n in stack.subviews{
+                  n.addSkeleton()
+                }
+                
+            }else{
+                i.addSkeleton()
+            }
+        }
+    }
+}
