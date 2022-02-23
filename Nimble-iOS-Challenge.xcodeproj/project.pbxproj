@@ -15,7 +15,6 @@
 		C70FC19D27C59B1200B1CAC4 /* Ext+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70FC19C27C59B1200B1CAC4 /* Ext+UITextField.swift */; };
 		C70FC1A127C5A6C500B1CAC4 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70FC19F27C5A6C500B1CAC4 /* ForgotPasswordViewController.swift */; };
 		C70FC1A227C5A6C500B1CAC4 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70FC1A027C5A6C500B1CAC4 /* ForgotPasswordViewController.xib */; };
-		C70FC1A527C5A95F00B1CAC4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70FC1A427C5A95F00B1CAC4 /* HomeViewController.swift */; };
 		C70FC1A827C5B16A00B1CAC4 /* SingleHomeComponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70FC1A627C5B16900B1CAC4 /* SingleHomeComponentViewController.swift */; };
 		C70FC1A927C5B16A00B1CAC4 /* SingleHomeComponentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70FC1A727C5B16900B1CAC4 /* SingleHomeComponentViewController.xib */; };
 		C70FC1AB27C62B3A00B1CAC4 /* Ext+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70FC1AA27C62B3A00B1CAC4 /* Ext+UIColor.swift */; };
@@ -96,7 +95,6 @@
 		C70FC19C27C59B1200B1CAC4 /* Ext+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UITextField.swift"; sourceTree = "<group>"; };
 		C70FC19F27C5A6C500B1CAC4 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		C70FC1A027C5A6C500B1CAC4 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
-		C70FC1A427C5A95F00B1CAC4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C70FC1A627C5B16900B1CAC4 /* SingleHomeComponentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHomeComponentViewController.swift; sourceTree = "<group>"; };
 		C70FC1A727C5B16900B1CAC4 /* SingleHomeComponentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleHomeComponentViewController.xib; sourceTree = "<group>"; };
 		C70FC1AA27C62B3A00B1CAC4 /* Ext+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIColor.swift"; sourceTree = "<group>"; };
@@ -276,7 +274,6 @@
 				C70FC1AD27C62C9A00B1CAC4 /* SurveyView */,
 				C70FC1AC27C62C8000B1CAC4 /* SingleHomeView */,
 				C795FEA027C4217A0053BD21 /* HomeViewModel.swift */,
-				C70FC1A427C5A95F00B1CAC4 /* HomeViewController.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -642,7 +639,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C70FC1A527C5A95F00B1CAC4 /* HomeViewController.swift in Sources */,
 				C795FEA927C431B90053BD21 /* Ext+UIView.swift in Sources */,
 				C795FEAB27C431D70053BD21 /* Ext+UIImageView.swift in Sources */,
 				C70FC1B827C63F0400B1CAC4 /* SuccessPageViewController.swift in Sources */,

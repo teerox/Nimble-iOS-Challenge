@@ -103,6 +103,15 @@ extension HomeViewModel {
         }
         return result
     }
+    
+    func displayType() ->  [SingleSurveyIncluded] {
+        var result = singleSurvey.filter{$0.attributes?.displayType?.lowercased() == "star"}
+        let result2 = singleSurvey.filter{$0.attributes?.displayType?.lowercased() == "heart"}
+        let result3 = singleSurvey.filter{$0.attributes?.displayType?.lowercased() == "smiley"}
+        result.append(contentsOf: result2)
+        result.append(contentsOf: result3)
+        return result
+    }
 }
 
 

@@ -66,6 +66,9 @@ class LoginViewController: UIViewController {
     }
     
     @objc func handleForgotPassword(sender: UIButton) {
-        
+        let vc = ForgotPasswordViewController()
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
     }
 }
