@@ -16,7 +16,7 @@ class HomeViewModel {
     var allSurvey: [HomeDatum] = []
     var singleSurvey: [SingleSurveyIncluded] = []
     
-    init(apiClient: APIClient, cachedData: CacheData) {
+    init(apiClient: APIClient, cachedData: CacheData = CacheData()) {
         self.apiClient = apiClient
         self.cachedData = cachedData
     }

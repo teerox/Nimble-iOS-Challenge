@@ -25,6 +25,7 @@
 		C70FC1B527C637B100B1CAC4 /* SuveyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70FC1B327C637B100B1CAC4 /* SuveyViewController.xib */; };
 		C70FC1B827C63F0400B1CAC4 /* SuccessPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70FC1B627C63F0400B1CAC4 /* SuccessPageViewController.swift */; };
 		C70FC1B927C63F0400B1CAC4 /* SuccessPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70FC1B727C63F0400B1CAC4 /* SuccessPageViewController.xib */; };
+		C70FC1BC27C645F700B1CAC4 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70FC1BB27C645F700B1CAC4 /* Loader.swift */; };
 		C795FE7427C253CC0053BD21 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795FE7327C253CC0053BD21 /* APIClient.swift */; };
 		C795FE7627C2546E0053BD21 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795FE7527C2546E0053BD21 /* Endpoint.swift */; };
 		C795FE7827C2549C0053BD21 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795FE7727C2549C0053BD21 /* Constants.swift */; };
@@ -105,6 +106,7 @@
 		C70FC1B327C637B100B1CAC4 /* SuveyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuveyViewController.xib; sourceTree = "<group>"; };
 		C70FC1B627C63F0400B1CAC4 /* SuccessPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessPageViewController.swift; sourceTree = "<group>"; };
 		C70FC1B727C63F0400B1CAC4 /* SuccessPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessPageViewController.xib; sourceTree = "<group>"; };
+		C70FC1BB27C645F700B1CAC4 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		C795FE7327C253CC0053BD21 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		C795FE7527C2546E0053BD21 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		C795FE7727C2549C0053BD21 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 				C795FEB027C432070053BD21 /* Ext+UIViewController.swift */,
 				C70FC19C27C59B1200B1CAC4 /* Ext+UITextField.swift */,
 				C70FC1AA27C62B3A00B1CAC4 /* Ext+UIColor.swift */,
+				C70FC1BB27C645F700B1CAC4 /* Loader.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -660,6 +663,7 @@
 				C795FEA127C4217A0053BD21 /* HomeViewModel.swift in Sources */,
 				C795FE7B27C258F00053BD21 /* APIErrorModel.swift in Sources */,
 				C795FEA327C422BB0053BD21 /* HomeModel.swift in Sources */,
+				C70FC1BC27C645F700B1CAC4 /* Loader.swift in Sources */,
 				C795FEAF27C431F50053BD21 /* Ext+Date.swift in Sources */,
 				C795FE7627C2546E0053BD21 /* Endpoint.swift in Sources */,
 				C795FE9A27C3CFB60053BD21 /* LoginViewModel.swift in Sources */,

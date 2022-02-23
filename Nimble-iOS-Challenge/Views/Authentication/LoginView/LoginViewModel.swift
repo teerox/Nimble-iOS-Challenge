@@ -13,8 +13,9 @@ class LoginViewModel {
     let cachedData: CacheData?
     var loginSuccessful: Bool = false
     var logOutSuccessful: Bool = false
+    var passwordResetSuccess: Bool = false
     
-    init(apiClient: APIClient, cachedData: CacheData) {
+    init(apiClient: APIClient, cachedData: CacheData = CacheData()) {
         self.apiClient = apiClient
         self.cachedData = cachedData
     }
@@ -70,7 +71,7 @@ class LoginViewModel {
         loading(true)
         apiClient?.load(ResetPasswordResponse.self, .resetPassword(email: email), completion: { [weak self] result in
             loading(false)
-            guard let _ = self else {
+            guard let self = self else {
                 return
             }
             switch result {
@@ -80,6 +81,7 @@ class LoginViewModel {
                     onFailure(value)
                 }
             case .success(let data):
+                self.passwordResetSuccess = true
                 onSuccess(data.meta.message)
             }
         })

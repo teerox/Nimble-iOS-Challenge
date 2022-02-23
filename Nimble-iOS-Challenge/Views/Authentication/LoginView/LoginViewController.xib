@@ -34,7 +34,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Z8g-If-vnd">
                             <rect key="frame" x="10" y="198" width="364" height="228"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="Oip-hy-rrL">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dev@nimblehq.co" borderStyle="roundedRect" placeholder="Email" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="Oip-hy-rrL">
                                     <rect key="frame" x="0.0" y="0.0" width="364" height="56"/>
                                     <color key="backgroundColor" red="0.28998512030000001" green="0.27480539679999999" blue="0.25882118939999998" alpha="0.81765130655655005" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,7 +50,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dk1-A9-nDu">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12345678" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dk1-A9-nDu">
                                     <rect key="frame" x="0.0" y="86" width="364" height="56"/>
                                     <color key="backgroundColor" red="0.28998512030000001" green="0.27480539679999999" blue="0.25882118939999998" alpha="0.81765130659999996" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

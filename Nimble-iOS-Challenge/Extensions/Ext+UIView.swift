@@ -166,13 +166,13 @@ public extension UIView {
 // MARK: Building Blocks
 
 private extension UIView {
-
+    
     func constraintsForHeight(_ height: CGFloat) -> Constraints {
         return [
             heightAnchor.constraint(equalToConstant: height),
         ]
     }
-
+    
     func constraintsForWidth(_ width: CGFloat) -> Constraints {
         return [
             widthAnchor.constraint(equalToConstant: width),
@@ -247,11 +247,11 @@ public class SkeletonCover: UIView{
     
 }
 public extension UIView {
-     func endSkeleton() {
+    func endSkeleton() {
         for i in self.subviews{
             if let stack = i as? UIStackView{
                 for n in stack.subviews{
-                   n.removeSkeleton()
+                    n.removeSkeleton()
                 }
             }else{
                 i.removeSkeleton()
@@ -259,7 +259,7 @@ public extension UIView {
         }
     }
     
-     func removeSkeleton(){
+    func removeSkeleton(){
         for n in self.subviews{
             if let shellView = n as? SkeletonCover{
                 shellView.removeFromSuperview()
@@ -275,7 +275,7 @@ public extension UIView {
         if let nView = n as? SkeletonLabel{
             cover.backgroundColor = nView.skeletonColor.getColor
         }else{
-            cover.backgroundColor = UIColor.hexStringToUIColor(hex: "ECECEC")
+            cover.backgroundColor = UIColor.hexStringToUIColor(hex: "3D3D3F")
         }
         n.addSubview(cover)
         let cover2 = SkeletonCover(frame: n.bounds)
@@ -309,28 +309,36 @@ public extension UIView {
         animation.fillMode = CAMediaTimingFillMode.forwards
         gradientLayer.add(animation, forKey: "shimmerKey")
     }
-     func viewSkeleton(){
-         for i in self.subviews{
-              i.addSkeleton()
-            }
+    func viewSkeleton(){
+        for i in self.subviews{
+            i.addSkeleton()
         }
+    }
     
     
-   func removeViewSkeleton(){
-           for i in self.subviews{
-                i.removeSkeleton()
-              }
-          }
-   func startSkeleton(){
+    func removeViewSkeleton(){
+        for i in self.subviews{
+            i.removeSkeleton()
+        }
+    }
+    func startSkeleton(){
         for i in self.subviews{
             if let stack = i as? UIStackView{
                 for n in stack.subviews{
-                  n.addSkeleton()
+                    n.addSkeleton()
                 }
                 
             }else{
                 i.addSkeleton()
             }
         }
+    }
+    
+    func fadeTransition(_ duration:CFTimeInterval) {
+        let animation = CATransition()
+        animation.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+        animation.type = CATransitionType.fade
+        animation.duration = duration
+        layer.add(animation, forKey: CATransitionType.fade.rawValue)
     }
 }

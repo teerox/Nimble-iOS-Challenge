@@ -5,15 +5,16 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SingleHomeComponentViewController" customModule="Nimble_iOS_Challenge" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundImage" destination="cDC-M4-qGF" id="l1F-Wb-LNV"/>
                 <outlet property="bigDateLabel" destination="uqf-n5-Xsv" id="4yl-aQ-rZz"/>
                 <outlet property="dateLabel" destination="ex0-8U-vWS" id="i33-KF-ePx"/>
                 <outlet property="pagerTab" destination="VBS-Zs-JgK" id="HFT-th-Otl"/>
+                <outlet property="proceedBtn" destination="vim-xH-gcj" id="DA5-nW-Pg3"/>
                 <outlet property="surveyTitle" destination="xmJ-CS-z6Z" id="Ka9-nZ-3hf"/>
                 <outlet property="suveyDescription" destination="0gU-g5-ynQ" id="ey3-Qe-mWT"/>
                 <outlet property="userimage" destination="9AA-28-c4m" id="ibU-2Q-lUX"/>
@@ -25,7 +26,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultBackground" translatesAutoresizingMaskIntoConstraints="NO" id="cDC-M4-qGF">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultBackground" translatesAutoresizingMaskIntoConstraints="NO" id="cDC-M4-qGF">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday, JUNE 15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ex0-8U-vWS">
@@ -95,18 +96,17 @@
                     </subviews>
                 </stackView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="VBS-Zs-JgK">
-                    <rect key="frame" x="-15" y="640.5" width="414" height="27.5"/>
+                    <rect key="frame" x="15" y="640.5" width="121.5" height="27.5"/>
                 </pageControl>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="cDC-M4-qGF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4nM-bv-mUy"/>
                 <constraint firstAttribute="bottom" secondItem="cDC-M4-qGF" secondAttribute="bottom" id="81r-AF-M2P"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yXn-Nt-yiG" secondAttribute="trailing" constant="15" id="BGn-Nr-aM3"/>
                 <constraint firstItem="mXG-ZN-D7S" firstAttribute="top" secondItem="VBS-Zs-JgK" secondAttribute="bottom" constant="1" id="MY6-VS-sll"/>
                 <constraint firstItem="mXG-ZN-D7S" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="ShE-Ku-NzY"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VBS-Zs-JgK" secondAttribute="trailing" constant="15" id="YCv-sE-W8j"/>
                 <constraint firstItem="yXn-Nt-yiG" firstAttribute="top" secondItem="ex0-8U-vWS" secondAttribute="bottom" constant="15" id="cbJ-5C-hMD"/>
                 <constraint firstItem="cDC-M4-qGF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="evQ-E7-gKD"/>
                 <constraint firstItem="ex0-8U-vWS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="gDG-BR-mBV"/>
@@ -114,7 +114,7 @@
                 <constraint firstItem="ex0-8U-vWS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="gsX-w9-MEe"/>
                 <constraint firstAttribute="trailing" secondItem="cDC-M4-qGF" secondAttribute="trailing" id="j3q-xU-BLe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mXG-ZN-D7S" secondAttribute="trailing" constant="15" id="qUp-2E-OEy"/>
-                <constraint firstItem="VBS-Zs-JgK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="-15" id="tGD-g8-dDD"/>
+                <constraint firstItem="VBS-Zs-JgK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="tGD-g8-dDD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mXG-ZN-D7S" secondAttribute="bottom" constant="50" id="xYy-PO-hbu"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
@@ -124,8 +124,5 @@
         <image name="default" width="36" height="36"/>
         <image name="defaultBackground" width="375" height="812"/>
         <image name="takeSuvey" width="56" height="56"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

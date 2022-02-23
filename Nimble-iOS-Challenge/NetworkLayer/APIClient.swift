@@ -65,7 +65,6 @@ final class APIClient {
                 completion(.failure(.invalidRequest("No data available")))
                 return
             }
-           
             if 200 ..< 300 ~= httpResponse.statusCode {
                 do {
                     let responseJson = try JSONDecoder().decode(T.self, from: responseData)
