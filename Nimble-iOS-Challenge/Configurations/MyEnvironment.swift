@@ -13,7 +13,8 @@ public enum MyEnvironment {
     enum Keys {
         enum Plist {
             static let rootURL = "ROOT_URL"
-            static let apiKey = "API_KEY"
+            static let clientID = "CLIENT_ID"
+            static let clientSecret = "CLIENT_SECRET"
         }
     }
     
@@ -35,9 +36,16 @@ public enum MyEnvironment {
         return url
     }()
     
-    static let apiKey: String = {
-        guard let apiKey = MyEnvironment.infoDictionary["API_KEY"] as? String else {
-            fatalError("API Key not set in plist for this environment")
+    static let clientID: String = {
+        guard let apiKey = MyEnvironment.infoDictionary["CLIENT_ID"] as? String else {
+            fatalError("Client id not set in plist for this environment")
+        }
+        return apiKey
+    }()
+    
+    static let clientSecret: String = {
+        guard let apiKey = MyEnvironment.infoDictionary["CLIENT_SECRET"] as? String else {
+            fatalError("Client Secret not set in plist for this environment")
         }
         return apiKey
     }()
