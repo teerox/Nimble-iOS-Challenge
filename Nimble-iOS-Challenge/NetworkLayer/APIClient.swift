@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 enum RequestType: String {
     case GET
@@ -68,6 +69,9 @@ final class APIClient {
             if 200 ..< 300 ~= httpResponse.statusCode {
                 do {
                     let responseJson = try JSONDecoder().decode(T.self, from: responseData)
+                    let log = try JSON(data: responseData)
+                   // print("responseCode : \(responseCode.statusCode)")
+                    print("responseJSON : \(log)")
                     completion(.success(responseJson))
                 }
                 catch let parseJSONError {

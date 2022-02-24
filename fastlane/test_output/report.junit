@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='Nimble-iOS-ChallengeUITests.xctest' tests='12' failures='3'>
+  <testsuite name='Nimble_iOS_ChallengeTests.HomeViewModelTest' tests='4' failures='3'>
+    <testcase classname='Nimble_iOS_ChallengeTests.HomeViewModelTest' name='testFetchedHomeDataIsntEmpty'>
+      <failure message='failed'>Nimble-iOS-ChallengeTests/HomeViewModelTest.swift:49</failure>
+    </testcase>
+    <testcase classname='Nimble_iOS_ChallengeTests.HomeViewModelTest' name='testSingleSurveyHomeDataIsEmptyWithWrondId' time='0.399'/>
+    <testcase classname='Nimble_iOS_ChallengeTests.HomeViewModelTest' name='testSingleSurveyHomeDataIsntEmpty'>
+      <failure message='failed'>Nimble-iOS-ChallengeTests/HomeViewModelTest.swift:62</failure>
+    </testcase>
+    <testcase classname='Nimble_iOS_ChallengeTests.HomeViewModelTest' name='testUserDetailIsAvailable'>
+      <failure message='failed'>Nimble-iOS-ChallengeTests/HomeViewModelTest.swift:37</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name='Nimble_iOS_ChallengeTests.LoginViewModelTest' tests='4' failures='0'>
+    <testcase classname='Nimble_iOS_ChallengeTests.LoginViewModelTest' name='testIfDataIsCached' time='0.768'/>
+    <testcase classname='Nimble_iOS_ChallengeTests.LoginViewModelTest' name='testIfDataIsNotCached' time='1.179'/>
+    <testcase classname='Nimble_iOS_ChallengeTests.LoginViewModelTest' name='testLoginWithCorrectDetails' time='0.836'/>
+    <testcase classname='Nimble_iOS_ChallengeTests.LoginViewModelTest' name='testLoginWithEmptyDetails' time='0.001'/>
+  </testsuite>
+  <testsuite name='Nimble_iOS_ChallengeTests.Nimble_iOS_ChallengeTests' tests='2' failures='0'>
+    <testcase classname='Nimble_iOS_ChallengeTests.Nimble_iOS_ChallengeTests' name='testExample' time='0.001'/>
+    <testcase classname='Nimble_iOS_ChallengeTests.Nimble_iOS_ChallengeTests' name='testPerformanceExample' time='0.308'/>
+  </testsuite>
+  <testsuite name='Nimble_iOS_ChallengeUITests.Nimble_iOS_ChallengeUITests' tests='2' failures='0'>
+    <testcase classname='Nimble_iOS_ChallengeUITests.Nimble_iOS_ChallengeUITests' name='testExample' time='1.647'/>
+    <testcase classname='Nimble_iOS_ChallengeUITests.Nimble_iOS_ChallengeUITests' name='testLaunchPerformance' time='81.785'/>
+  </testsuite>
+</testsuites>

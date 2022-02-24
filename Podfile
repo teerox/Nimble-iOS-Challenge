@@ -8,7 +8,7 @@ target 'Nimble-iOS-Challenge' do
   # Pods for Nimble-iOS-Challenge
   pod 'SDWebImage', '~> 5.0'
   pod 'Cosmos', '~> 23.0'
-
+  pod 'SwiftyJSON', '~> 4.0'
   target 'Nimble-iOS-ChallengeTests' do
     inherit! :search_paths
     # Pods for testing
