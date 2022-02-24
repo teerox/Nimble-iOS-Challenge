@@ -53,7 +53,7 @@ class HomeViewModelTest: XCTestCase {
     }
     
     
-    func testSingleSurveyHomeDataIsEmptyWithEmptyID() {
+    func testSingleSurveyHomeDataIsntEmpty() {
         let expectation = expectation(description: "Waiting for data")
         viewModel.getUserSurvey(id: "d5de6a8f8f5f1cfe51bc") {
             XCTAssert(!self.viewModel.singleSurvey.isEmpty)
