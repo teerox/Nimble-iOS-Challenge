@@ -114,13 +114,6 @@ struct EachScreenData {
 
 
 
-
-
-
-
-
-
-
 struct SingleSurveyResponse: Codable {
     let data: SingleSurveyDataClass?
     let included: [SingleSurveyIncluded]?
